@@ -1,0 +1,18 @@
+apply plugin:'groovy'
+apply plugin:'eclipse'
+
+repositories {
+    mavenCentral()
+}
+
+task wrapper(type:Wrapper) {
+    gradleVersion = '1.6'
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.1.5'
+    compile 'org.apache.commons:commons-math3:3.0'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+    runtime 'com.h2database:h2:1.3.170'
+    runtime 'mysql:mysql-connector-java:5.1.22'
+}
