@@ -32,17 +32,17 @@ class Department {
         empMap.values()
     }
     
-    JavaDepartment plus(Employee e) {
+    Department plus(Employee e) {
         hire(e)
         this
     }
     
-    JavaDepartment minus(Employee e) {
+    Department minus(Employee e) {
         layOff(e)
         this
     }
     
-    JavaDepartment leftShift(Employee e) {
+    Department leftShift(Employee e) {
         hire(e)
         this
     }

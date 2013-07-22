@@ -19,7 +19,7 @@ import static org.junit.Assert.*
 import spock.lang.Specification
 
 class DepartmentSpec extends Specification {
-    private Department dept;
+    Department dept
     
     def setup() {
         dept = new Department(name:'IT')
