@@ -18,11 +18,11 @@ package hr;
 import static org.junit.Assert.*
 import spock.lang.Specification
 
-class DepartmentTest extends Specification {
-    private Department dept;
+class JavaDepartmentSpec extends Specification {
+    private JavaDepartment dept;
     
     def setup() {
-        dept = new Department(name:'IT')
+        dept = new JavaDepartment(name:'IT')
     }
     
     def "add employee to dept should increase total by 1"() {

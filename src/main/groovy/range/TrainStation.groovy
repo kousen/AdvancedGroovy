@@ -3,10 +3,16 @@ package range
 import java.text.NumberFormat
 
 class TrainStation implements Comparable<TrainStation> {
+    
+    // Links to next and previous stations
     TrainStation next
     TrainStation previous
+    
+    // location attributes
     String city
     String state
+    
+    // set by Geocoder service
     BigDecimal latitude
     BigDecimal longitude
     

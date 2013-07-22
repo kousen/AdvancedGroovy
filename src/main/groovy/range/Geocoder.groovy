@@ -27,7 +27,7 @@ class Geocoder {
             address: urlEncodedAddress].collect { it }.join('&')
         println url
         def response = new XmlSlurper().parse(url)
-        station.latitude = response.result[0].geometry.location.lat.toDouble()
-        station.longitude = response.result[0].geometry.location.lng.toDouble()
+        station.latitude = response.result[0].geometry.location.lat.toBigDecimal()
+        station.longitude = response.result[0].geometry.location.lng.toBigDecimal()
     }
 }

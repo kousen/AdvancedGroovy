@@ -4,7 +4,8 @@ import groovy.sql.Sql
 
 int filmInStock(filmId, storeId) {
     Sql sql = Sql.newInstance(
-        url:'jdbc:mysql://localhost:3306/sakila',driver:'com.mysql.jdbc.Driver',
+        url:'jdbc:mysql://localhost:3306/sakila',
+        driver:'com.mysql.jdbc.Driver',
         user:'root', password:'')
     
     int result
