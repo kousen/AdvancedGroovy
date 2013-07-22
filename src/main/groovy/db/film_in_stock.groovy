@@ -9,7 +9,8 @@ int filmInStock(filmId, storeId) {
         user:'root', password:'')
     
     int result
-    sql.call('{call film_in_stock(?,?,?)}', [filmId, storeId, Sql.INTEGER]) { count ->
+    sql.call('{call film_in_stock(?,?,?)}', 
+        [filmId, storeId, Sql.INTEGER]) { count ->
         result = count
     }
     result
