@@ -16,17 +16,17 @@
 package range
 
 class Geocoder {
-    String base = 'http://maps.google.com/maps/api/geocode/xml?'
+    public static final String BASE = 
+        'http://maps.google.com/maps/api/geocode/xml?'
 
     void fillInLatLng(TrainStation station) {
-        String urlEncodedAddress = 
+        String encoded = 
             [station.city, station.state].collect { 
                 URLEncoder.encode(it,'UTF-8')
             }.join(',') 
-        String url = base + [sensor:false,
-            address: urlEncodedAddress].collect { it }.join('&')
-        println url
-        def response = new XmlSlurper().parse(url)
+        String qs = [sensor:false, address: encoded].collect { it }.join('&')
+        println "$BASE$qs"
+        def response = new XmlSlurper().parse("$BASE$qs")
         station.latitude = response.result[0].geometry.location.lat.toBigDecimal()
         station.longitude = response.result[0].geometry.location.lng.toBigDecimal()
     }

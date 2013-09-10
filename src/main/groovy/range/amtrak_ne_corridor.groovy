@@ -10,24 +10,16 @@ TrainStation nhv = new TrainStation(city:'New Haven', state:'CT')
 TrainStation pvd = new TrainStation(city:'Providence', state:'RI')
 TrainStation bos = new TrainStation(city:'Boston', state:'MA')
 
-was.next = bal
-bal.previous = was
-bal.next = wil
-wil.previous = bal
-wil.next = phl
-phl.previous = wil
-phl.next = nwk
-nwk.previous = phl
-nwk.next = nyc
-nyc.previous = nwk
-nyc.next = nhv
-nhv.previous = nyc
-nhv.next = pvd
-pvd.previous = nhv
-pvd.next = bos
-bos.previous = pvd
-
 def ne_corridor = [was, bal, wil, phl, nwk, nyc, nhv, pvd, bos]
+
+was.next = bal; bal.previous = was
+bal.next = wil; wil.previous = bal
+wil.next = phl; phl.previous = wil
+phl.next = nwk; nwk.previous = phl
+nwk.next = nyc; nyc.previous = nwk
+nyc.next = nhv; nhv.previous = nyc
+nhv.next = pvd; pvd.previous = nhv
+pvd.next = bos; bos.previous = pvd
 
 Geocoder geo = new Geocoder()
 ne_corridor.each { station -> 
