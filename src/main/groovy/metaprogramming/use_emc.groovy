@@ -31,6 +31,7 @@ Logger.metaClass.methodMissing = { String name, args ->
 
 
 Logger log = Logger.getLogger(this.class.name)
+log.cowabunga 'dude'
 log.dude 'seriously?'
 log.wtf 'no effin way'
 log.whoa 'dude, seriously'

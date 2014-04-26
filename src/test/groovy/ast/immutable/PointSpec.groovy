@@ -66,4 +66,16 @@ class PointSpec extends Specification {
         then:
         ReadOnlyPropertyException e = thrown()
     }
+
+    def 'can you change x using direct ref?'() {
+        given:
+        p = new Point(x:3, y:4)
+
+        when:
+        p.@y = 5
+
+        then:
+        GroovyRuntimeException e = thrown()
+        e.message == 'Cannot set the property \'y\' because the backing field is final.'
+    }
 }
