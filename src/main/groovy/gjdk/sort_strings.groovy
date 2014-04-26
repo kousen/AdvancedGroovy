@@ -25,12 +25,13 @@ println strings
 assert strings*.size() == [1, 2, 2, 4, 4, 7]
 
 // Groovy Comparator reverse sort
-strings.sort( new Comparator<String>() {
-	int compare(String s1, String s2) {
-		return s2.size() <=> s1.size()
-	}
-})
-println strings
+//   (Note: issues with Java 8)
+//strings.sort( new Comparator<String>() {
+//	int compare(String s1, String s2) {
+//		return s2.size() <=> s1.size()
+//	}
+//})
+//println strings
 
 // Groovy closure sort
 strings.sort { it.size() }

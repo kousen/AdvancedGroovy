@@ -16,11 +16,11 @@
 package ast.delegate
 
 class Phone {
-    def dial(String number) { "dialing $number" }
+    String dial(String number) { "dialing $number" }
 }
 
 class Camera {
-    def takePicture() { "taking picture" }
+    String takePicture() { "taking picture" }
 }
 
 class SmartPhone {

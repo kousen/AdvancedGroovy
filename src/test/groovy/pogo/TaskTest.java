@@ -7,10 +7,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.junit.Ignore;
 import org.junit.Test;
-
-import pogo.Task;
 
 public class TaskTest {
     private Date now = new Date();

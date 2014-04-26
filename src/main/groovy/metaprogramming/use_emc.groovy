@@ -26,13 +26,15 @@ Logger.metaClass.methodMissing = { String name, args ->
         delegate.log(level,varArgs[0])
     }
     Logger.metaClass."$name" = impl
-    impl args
+    impl(args)
 }
 
 
 Logger log = Logger.getLogger(this.class.name)
+log.dude 'seriously?'
 log.wtf 'no effin way'
 log.whoa 'dude, seriously'
 log.rofl "you're kidding, right?"
+log.rofl 'rolling on the floor laughing'
 log.rofl 'rolling on the floor laughing'
 log.whatever 'heavy sigh'

@@ -34,8 +34,8 @@ class ComplexSpec extends Specification {
 
     def "plus method aliased to add"() {
         given:
-        Complex first = new Complex(1.0, 3.0);
-        Complex second = new Complex(2.0, 5.0);
+        Complex first = new Complex(1.0, 3.0)
+        Complex second = new Complex(2.0, 5.0)
     
         expect:
         new Complex(3.0, 8.0) == first + second
