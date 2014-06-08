@@ -14,7 +14,7 @@ public class ListDirectoriesTest {
 
     @Test
     public void testListDirectoryNames() {
-        String[] dirs = ld.listDirectoryNames(".");
+        String[] dirs = ld.listDirectoryNames("/");
         for (String name : dirs) {
             System.out.println(name);
             assertTrue(new File(name).isDirectory());
