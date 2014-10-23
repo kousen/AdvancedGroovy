@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 
 class LoggingTests extends GroovyLogTestCase {
     String baseDir = 'src/main/groovy/metaprogramming'
-    
+
     void testWithoutCustomLevel() {
         def result = stringLog(Level.INFO, without_custom_levels.class.name) {
             GroovyShell shell = new GroovyShell()
@@ -33,7 +33,7 @@ class LoggingTests extends GroovyLogTestCase {
         assert result.contains('INFO: for your information')
         assert result.contains('SEVERE: oh my goodness')
     }
-    
+
     void testSlangCategory() {
         def result = stringLog(Level.INFO, use_slang_category.class.name) {
             GroovyShell shell = new GroovyShell()
@@ -48,7 +48,6 @@ class LoggingTests extends GroovyLogTestCase {
             GroovyShell shell = new GroovyShell()
             shell.evaluate(new File("$baseDir/use_emc.groovy"))
         }
-        assert result.contains('WTF: no effin way')
         assert result.contains('WHOA: dude, seriously')
         assert result.contains("ROFL: you're kidding, right?")
     }

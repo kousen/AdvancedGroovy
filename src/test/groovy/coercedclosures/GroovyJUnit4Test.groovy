@@ -8,6 +8,7 @@ class GroovyJUnit4Test {
 	@Test
 	void testGetPositives() {
         def results = impl.getPositives(-3..3 as int[])
+        assert results.size() == 3
         assert results.every { it > 0 }
 	}
 

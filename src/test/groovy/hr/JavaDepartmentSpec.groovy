@@ -33,7 +33,8 @@ class JavaDepartmentSpec extends Specification {
         dept = dept + fred
         
         then:
-        dept.employees.size() == old(dept.employees.size()) + 1
+        dept.employees.size() ==
+                old(dept.employees.size()) + 1
     }
     
     def "add two employees via chained plus"() {
