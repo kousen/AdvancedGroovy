@@ -1,4 +1,4 @@
-package builder
+package icndb
 
 import groovy.json.JsonSlurper
 import groovy.swing.SwingBuilder
