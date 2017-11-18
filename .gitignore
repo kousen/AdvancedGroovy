@@ -6,3 +6,4 @@ out
 .classpath
 .settings
 *~
+.idea
