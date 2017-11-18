@@ -7,7 +7,7 @@ class OpenWeather {
     String base = "http://api.openweathermap.org/data/2.5/weather?"
     Gson gson = new Gson()
 
-    String getWeather(city='Marlborough', state='CT') {
+    String getWeather(city='Hartford', state='US') {
         String qs = [q: "$city,$state", APPID: appid ].collect { it }.join('&')
         String url = "$base$qs"
         String jsonTxt = url.toURL().text

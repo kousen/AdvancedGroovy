@@ -1,7 +1,7 @@
 package openweather
 
 OpenWeather ow = new OpenWeather()
-println ow.weather  // called Marlborough, CT, but really Hartford
+println ow.weather  // called Hartford
 
 // Home of Paul King, co-author of _Groovy in Action_ and my personal hero
 println ow.getWeather('Brisbane', 'Australia')
@@ -11,15 +11,13 @@ println ow.getWeather('Brisbane', 'Australia')
 println ow.getWeather('Paris', 'France')
 
 // Have to check the weather in Java, right?
-println ow.getWeather('Java','Indonesia')
+println ow.getWeather('Jakarta','ID')
 
 // Is it always sunny in Philadelphia?
-println ow.getWeather('Philadelphia', 'PA')
+println ow.getWeather('Philadelphia', 'US')
 
 // Any weather stations in Antarctica?
-println ow.getWeather('', 'Antarctica')
+println ow.getWeather('McMurdo Station', 'AQ')
 
 // Is it colder in Winnipeg than in Antarctica?
-//println ow.getWeather('Winnipeg', 'Manitoba')
-
-//println ow.getWeather('St. Cloud', 'Minnesota')
+//println ow.getWeather('Winnipeg', 'CA')

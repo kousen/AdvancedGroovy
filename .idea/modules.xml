@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AdvancedGroovy.iml" filepath="$PROJECT_DIR$/AdvancedGroovy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedGroovy_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedGroovy_main.iml" group="AdvancedGroovy" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdvancedGroovy_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AdvancedGroovy_test.iml" group="AdvancedGroovy" />
+    </modules>
+  </component>
+</project>
