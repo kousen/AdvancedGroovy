@@ -12,13 +12,13 @@ class OpenWeatherSpec extends Specification {
         
         then:
         result
-        result.contains('41.64')
-        result.contains('-72.47')
+        result.contains('41.76')
+        result.contains('-72.69')
     }
     
-    def 'Boston, MA works'() {
+    def 'Boston, US works'() {
         when:
-        String result = ow.getWeather('Boston','MA')
+        String result = ow.getWeather('Boston','US')
         println result
         
         then:
@@ -29,7 +29,7 @@ class OpenWeatherSpec extends Specification {
     
     def "The weather is always great in Honolulu"() {
         when:
-        String result = ow.getWeather('Honolulu', 'HI')
+        String result = ow.getWeather('Honolulu', 'US')
         println result
         
         then:
